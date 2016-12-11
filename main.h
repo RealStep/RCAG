@@ -3,11 +3,9 @@
 
 #include <iostream>
 #include <string>
-#include <unistd.h>
 
 using namespace std;
 
-unsigned int microseconds;
 extern string username;
 extern string start;
 
