@@ -3,8 +3,9 @@ sudo: required
 compiler: g++
 os:
 - linux
-before_install:
-- sudo apt-get update -qq
-- sudo apt-get install -qq g++ -y 
+addons:
+  apt:
+    packages:
+    - g++
 script:
 - g++ main.cpp -o main -std=c++11
