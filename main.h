@@ -6,35 +6,37 @@
 #include <chrono>
 #include <thread>
 
+#include "colours.h"
+
 using namespace std;
 
 extern string username;
 extern string start;
 
 int load() {
-	cout << "==================================" << endl;
-	cout << "     Hello and welcome to the     " << endl;
-	cout << " RealStep Console Adventure Game, " << endl;
-	cout << "        or RCAG for short!        " << endl;
-	cout << "==================================" << endl;
+	Colour::Modifier red(Colour::FG_RED);
+	Colour::Modifier bold(Colour::TY_BOLD);
+	cout << red << bold << "=============================================" << endl;
+	cout << "          Hello and welcome to the          " << endl;
+	cout << "      RealStep Console Adventure Game,      " << endl;
+	cout << "             or RCAG for short!             " << endl;
+	cout << "============================================" << endl;
 	this_thread::sleep_for(chrono::milliseconds(2000));
-	cout << "  What do you want to be called?  " << endl;
+	cout << "       What do you want to be called?       " << endl;
 	cin >> username;
-	cout << "good choice, " << username << "!" << endl;
+	cout << "     good choice, " << username << "!" << endl;
 	this_thread::sleep_for(chrono::milliseconds(2000));
-	cout << "==================================" << endl;
-	cout << "     Choose your paths wisely!    " << endl;
+	cout << "============================================" << endl;
+	cout << "          Choose your paths wisely!         " << endl;
 	this_thread::sleep_for(chrono::milliseconds(2000));
-	cout << "==================================" << endl;
-	cout << "           STARTING GAME          " << endl;
-	cout << "==================================" << endl;
-	this_thread::sleep_for(chrono::milliseconds(4000));
+	cout << "============================================" << endl;
 }
 
 int finish() {
-	cout << "==================================" << endl;
-	cout << "            ENDING GAME           " << endl;
-	cout << "==================================" << endl;
+	Colour::Modifier def(Colour::FG_DEFAULT);
+	Colour::Modifier reset(Colour::TY_RESET);
+	cout << "                 game stuff                 "<< endl;
+	cout << "============================================" << def << reset << endl;
 	this_thread::sleep_for(chrono::milliseconds(1000));
 	return 0;
 }
