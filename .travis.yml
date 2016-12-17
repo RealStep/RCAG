@@ -4,4 +4,4 @@ compiler: g++
 os:
 - linux
 script:
-- g++ main.cpp -o main
+- g++ main.cpp -o main -std=c++11
