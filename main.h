@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <thread>
 
 using namespace std;
 
@@ -15,20 +17,25 @@ int load() {
 	cout << " RealStep Console Adventure Game, " << endl;
 	cout << "        or RCAG for short!        " << endl;
 	cout << "==================================" << endl;
+	this_thread::sleep_for(chrono::milliseconds(2000));
 	cout << "  What do you want to be called?  " << endl;
 	cin >> username;
 	cout << "good choice, " << username << "!" << endl;
+	this_thread::sleep_for(chrono::milliseconds(2000));
 	cout << "==================================" << endl;
 	cout << "     Choose your paths wisely!    " << endl;
+	this_thread::sleep_for(chrono::milliseconds(2000));
 	cout << "==================================" << endl;
 	cout << "           STARTING GAME          " << endl;
 	cout << "==================================" << endl;
+	this_thread::sleep_for(chrono::milliseconds(4000));
 }
 
 int finish() {
 	cout << "==================================" << endl;
 	cout << "            ENDING GAME           " << endl;
 	cout << "==================================" << endl;
+	this_thread::sleep_for(chrono::milliseconds(1000));
 	return 0;
 }
 
