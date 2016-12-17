@@ -6,7 +6,7 @@ os:
 addons:
   apt:
     packages:
-    - gcc-4.8
-    - g++-4.8
+    - gcc-5
+    - g++-5
 script:
 - g++ main.cpp -o main -std=c++11
