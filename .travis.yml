@@ -7,6 +7,6 @@ before_install:
   - sudo apt-get purge g++ gcc -y
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update -q
-  - sudo apt-get install gcc-5 -y
+  - sudo apt-get install gcc-5 g++-5 -y
 script:
 - g++ main.cpp -o main -std=c++11
