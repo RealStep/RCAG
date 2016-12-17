@@ -3,3 +3,5 @@ sudo: required
 compiler: g++
 os:
 - linux
+install:
+- g++ main.cpp -o main
