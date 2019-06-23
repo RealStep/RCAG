@@ -1,12 +1,7 @@
 language: cpp
-sudo: required
 compiler: g++
-os:
-- linux
-before_install:
-  - sudo apt-get purge g++ gcc -y
-  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-  - sudo apt-get update -q
-  - sudo apt-get install gcc-5 g++-5 -y
+dist: xenial
+os: linux
+
 script:
-- g++-5 main.cpp -o main -std=c++11
+- g++ main.cpp -o main -std=c++11

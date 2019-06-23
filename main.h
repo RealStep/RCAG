@@ -30,6 +30,7 @@ int load() {
 	cout << "          Choose your paths wisely!         " << endl;
 	this_thread::sleep_for(chrono::milliseconds(2000));
 	cout << "============================================" << endl;
+	return 0;
 }
 
 int finish() {
